@@ -1,28 +1,24 @@
+import { IonApp, IonSplitPane, IonPage } from "@ionic/react";
 import React, { Component } from "react";
-import "@ionic/core/css/core.css";
-import "@ionic/core/css/ionic.bundle.css";
-import {
-  IonApp,
-  IonContent,
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardSubtitle
-} from "@ionic/react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Menu from "./components/menu/Menu";
+import About from "./pages/About";
 
 class App extends Component {
   render() {
     return (
-      <IonApp>
-        <IonContent>
-          <IonCard>
-            <IonCardHeader>
-              <IonCardSubtitle>Welcome to Ionic</IonCardSubtitle>
-              <IonCardTitle>Running on React</IonCardTitle>
-            </IonCardHeader>
-          </IonCard>
-        </IonContent>
-      </IonApp>
+      <BrowserRouter>
+        <IonApp>
+          <IonSplitPane contentId="main">
+            <Menu />
+            <IonPage id="main">
+              <Switch>
+                <Route path="/" component={About} />
+              </Switch>
+            </IonPage>
+          </IonSplitPane>
+        </IonApp>
+      </BrowserRouter>
     );
   }
 }
