@@ -14,7 +14,7 @@ interface PageHaderProps {
 const PageHeader: React.SFC<PageHaderProps> = ({ title }) => {
   return (
     <IonHeader>
-      <IonToolbar color="primary">
+      <IonToolbar>
         <IonButtons slot="start">
           <IonMenuButton />
         </IonButtons>
