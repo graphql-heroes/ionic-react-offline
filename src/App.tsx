@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Menu from "./components/menu/Menu";
 import About from "./pages/About";
+import ManageTasks from "./pages/ManageTasks";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
             <IonPage id="main">
               <Switch>
                 <Route path="/" component={About} />
+                <Route path="/tasks" component={ManageTasks} />
               </Switch>
             </IonPage>
           </IonSplitPane>
