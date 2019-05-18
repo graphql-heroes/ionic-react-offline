@@ -11,7 +11,7 @@ interface PageHaderProps {
   title: string;
 }
 
-const PageHeader: React.SFC<PageHaderProps> = ({ title }) => {
+const PageHeader: React.SFC<PageHaderProps> = ({ title, children }) => {
   return (
     <IonHeader>
       <IonToolbar>
@@ -19,6 +19,7 @@ const PageHeader: React.SFC<PageHaderProps> = ({ title }) => {
           <IonMenuButton />
         </IonButtons>
         <IonTitle>{title}</IonTitle>
+        {children}
       </IonToolbar>
     </IonHeader>
   );
