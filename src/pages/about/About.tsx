@@ -7,7 +7,7 @@ import {
   IonCardTitle,
   IonCardContent
 } from "@ionic/react";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../../components/PageHeader";
 
 export class About extends Component {
   render() {

@@ -2,8 +2,8 @@ import { IonApp, IonSplitPane, IonPage } from "@ionic/react";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Menu from "./components/menu/Menu";
-import About from "./pages/About";
-import ManageTasks from "./pages/ManageTasks/ManageTasks";
+import About from "./pages/about/About";
+import ManageTasks from "./pages/manageTasks/ManageTasks";
 
 class App extends Component {
   render() {
