@@ -104,8 +104,17 @@ export class ManageTasks extends Component {
             </IonContent>
             <IonFooter>
               <IonButton
+                color="primary"
                 expand="block"
                 shape="round"
+                // onClick={}
+              >
+                Add Item
+              </IonButton>
+              <IonButton
+                expand="block"
+                shape="round"
+                color="danger"
                 onClick={() => this.setState(() => ({ showModal: false }))}
               >
                 Close
