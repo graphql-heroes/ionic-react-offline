@@ -15,16 +15,25 @@ import {
   IonBadge,
   IonNote,
   IonItem,
-  IonIcon
+  IonIcon,
+  IonModal,
+  IonInput
 } from "@ionic/react";
 import PageHeader from "../../components/PageHeader";
 import "./ManageTasks.scss";
 
 export class ManageTasks extends Component {
+  state = {
+    showModal: false
+  };
+
   /**
    * Navigate to new item add page
    */
-  openNewItemPage = () => {};
+  openNewItemPage = () => {
+    this.setState({ showModal: true });
+  };
+
   render() {
     return (
       <IonPage>
@@ -79,6 +88,30 @@ export class ManageTasks extends Component {
               </IonItemGroup>
             </IonList>
           </div>
+          <IonModal
+            isOpen={this.state.showModal}
+            onDidDismiss={() => this.setState(() => ({ showModal: false }))}
+          >
+            <IonContent padding>
+              <IonItem>
+                <IonLabel position="floating">Title</IonLabel>
+                <IonInput />
+              </IonItem>
+              <IonItem>
+                <IonLabel position="floating">Description</IonLabel>
+                <IonInput />
+              </IonItem>
+            </IonContent>
+            <IonFooter>
+              <IonButton
+                expand="block"
+                shape="round"
+                onClick={() => this.setState(() => ({ showModal: false }))}
+              >
+                Close
+              </IonButton>
+            </IonFooter>
+          </IonModal>
         </IonContent>
 
         <IonFooter>
