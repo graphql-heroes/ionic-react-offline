@@ -1,4 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GraphQL Server
+
+The GraphQL server uses https://github.com/aerogear/voyager-server[Voyager Server] to provide GraphQL capabilities along with security, monitoring and tools to simplify GraphQL API development.
+
+## Getting Started
+
+Requirements:
+
+- Docker
+- Node.js 6.x or above to run server
+- (optional) access to a running OpenShift instance
+
+### Running the server
+
+1. Start the PostgreSQL container
+
+```shell
+cd ./server
+docker-compose up -d
+```
+
+2. Start the server
+
+```shell
+npm install
+npm run start
+```
+
+### NOTE
+
+If Keycloak integration is enabled on the server, and the Keycloak server is running using self-signed certificate, please make sure set this environment variable before running the server:
+
+```shell
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+```
+
+### Running the Server on OpenShift (optional)
+
+1. Log into your OpenShift instance with the `oc login` command.
+2. Deploy the Server with PostgreSQL
+
+```shell
+oc new-app -f server/openshift-template.yml
+```
 
 ## Available Scripts
 
