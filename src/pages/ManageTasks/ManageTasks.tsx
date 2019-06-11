@@ -21,11 +21,18 @@ import {
 } from "@ionic/react";
 import PageHeader from "../../components/PageHeader";
 import "./ManageTasks.scss";
-
+// import { ItemService } from "../../services/Item";
+import { graphql } from "react-apollo";
+import { GET_TASKS } from "../../graphQL/queries/graphql.queries";
 export class ManageTasks extends Component {
   state = {
     showModal: false
   };
+
+  componentDidMount() {
+    // const service = new ItemService();
+    // service.getItems();
+  }
 
   /**
    * Navigate to new item add page
@@ -35,6 +42,7 @@ export class ManageTasks extends Component {
   };
 
   render() {
+    console.log("this.props", this.props);
     return (
       <IonPage>
         <PageHeader title="Manage Tasks">
@@ -161,4 +169,4 @@ export class ManageTasks extends Component {
   }
 }
 
-export default ManageTasks;
+export default graphql(GET_TASKS)(ManageTasks);
