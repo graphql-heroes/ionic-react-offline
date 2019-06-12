@@ -11,14 +11,15 @@ interface PageHaderProps {
   title: string;
 }
 
-const PageHeader: React.SFC<PageHaderProps> = ({ title }) => {
+const PageHeader: React.SFC<PageHaderProps> = ({ title, children }) => {
   return (
     <IonHeader>
-      <IonToolbar color="primary">
+      <IonToolbar>
         <IonButtons slot="start">
           <IonMenuButton />
         </IonButtons>
         <IonTitle>{title}</IonTitle>
+        {children}
       </IonToolbar>
     </IonHeader>
   );
