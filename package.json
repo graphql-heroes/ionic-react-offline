@@ -8,18 +8,18 @@
     "@types/node": "11.13.5",
     "@types/react": "16.8.13",
     "@types/react-dom": "16.8.4",
-    "@types/react-router": "^4.4.5",
-    "@types/react-router-dom": "^4.3.2",
-    "apollo-cache-inmemory": "^1.4.2",
-    "apollo-client": "^2.6.2",
-    "apollo-link-http": "^1.5.14",
-    "graphql-tag": "^2.10.1",
-    "offix-client": "^0.5.0",
-    "react": "^16.8.6",
-    "react-apollo": "^2.5.6",
-    "react-dom": "^16.8.6",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
+    "@types/react-router": "4.4.5",
+    "@types/react-router-dom": "4.3.4",
+    "apollo-cache-inmemory": "1.6.2",
+    "apollo-client": "2.6.2",
+    "apollo-link-http": "1.5.15",
+    "graphql-tag": "2.10.1",
+    "offix-client": "0.5.0",
+    "react": "16.8.6",
+    "react-apollo": "2.5.6",
+    "react-dom": "16.8.6",
+    "react-router": "5.0.1",
+    "react-router-dom": "5.0.1",
     "react-scripts": "2.1.8",
     "typescript": "3.4.4"
   },
@@ -39,6 +39,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "4.12.0"
   }
 }
